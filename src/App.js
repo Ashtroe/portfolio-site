@@ -11,7 +11,6 @@ import {
 import SideNav from './components/SideNav'
 import Landing from './components/Landing'
 import Web from './components/Web'
-import PhotoHome from './components/PhotoHome'
 import Photo from './components/Photo'
 import face from './img/face.png'
 
