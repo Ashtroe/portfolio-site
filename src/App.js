@@ -1,25 +1,59 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState, useEffect} from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams,
+  useLocation
+} from 'react-router-dom'
+import SideNav from './components/SideNav'
+import Landing from './components/Landing'
+import Web from './components/Web'
+import PhotoHome from './components/PhotoHome'
+import Photo from './components/Photo'
+import face from './img/face.png'
+
+let ScrollToTop = ()=>{
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <ScrollToTop />
+      <div className="App">
+        <SideNav />
+          <Switch>
+            <Route path="/" exact>
+              <Landing img = {face}/>
+            </Route>
+
+            <Route  path="/web" exact>
+              <Web />
+            </Route>
+
+            <Route  path="/photo" exact>
+              <Photo />
+            </Route>
+
+            <Route path='/Ramiro'>
+              <Photo gallery= 'Ramiro'/>
+            </Route>
+
+          </Switch>
+      </div>
+    </Router>
+  )
 }
 
 export default App;
