@@ -1,11 +1,12 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
 
+
 body{
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
-  margin: 0 10px 0 10px;;
+  margin: 0;
   height:100vh;
-  width: 100vw;
+  width: 1920px;;
   overflow-x: hidden;
   display: flex;
 }
@@ -31,19 +32,63 @@ h1{
   z-index: -2;
   margin: 0;
 }
-
+/* Nav */
+.nav{
+  position: absolute;
+}
+a{
+  font-size: 24px;
+  text-decoration: none;
+  color: #B1B1B1;
+  margin-left: 4.375rem;
+}
+a:first-of-type{
+  margin-left: 8rem;
+}
+a:hover{
+  color: #CD6161;
+  font-weight: bold;
+}
 /* SideNav */
 .side-nav{
+  border:solid;
   position: fixed;
-  left: 0;
+  left: -100px;
   height: 1080px;
-  width: 70px;
+  width: 140px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 20px;
+}
+.side-nav-content{
+  visibility: hidden;
+}
+.visible{
+  visibility: visible;
+  position: fixed;
+  left: 0px;
+  height: 1080px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.hamburger{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 50px;
+  height: 50px;;
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  z-index: 1;
+}
+.ham-line{
+  border-top: medium solid #CBCBCB;
+  width: 50px;
+}
 .line{
   color: #CBCBCB;
   border-left: solid;
@@ -55,15 +100,6 @@ h1{
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-}
-a{
-  font-size: 32px;
-  text-decoration: none;
-  color: #CBCBCB;
-}
-a:hover{
-  color: #CD6161;
-  font-weight: bold;
 }
 .ext-link{
   width: 3rem;
@@ -91,7 +127,8 @@ a:hover{
   background-size: contain;
 }
 #top{
-  height: 270px;
+
+  height: 220px;
 }
 #mid{
   height: 230px;
@@ -133,9 +170,10 @@ img{
 
 /* About */
 .about{
-  width: inherit;
+  margin: 0;
+  width: 100vw;
   height: 1080px;
-
+  background: #CD6161
 }
 #about{
   font-size: 34rem;
@@ -160,6 +198,7 @@ img{
 }
 .about p{
   font-size: 4rem;
+  color: #EEEEEE;
 }
 
 /* Web Projects */
@@ -238,4 +277,12 @@ img{
   height: 10rem;
   object-fit: contain;
   visibility: hidden;
+}
+/* Mobile */
+@media screen and (max-width: 375px) {
+  .profile-pic-ctnr{
+    position: absolute;
+    top: auto;
+    left: 0
+  }
 }

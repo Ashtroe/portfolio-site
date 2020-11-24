@@ -8,7 +8,7 @@ import {
   useParams,
   useLocation
 } from 'react-router-dom'
-import SideNav from './components/SideNav'
+import Nav from './components/Nav'
 import Landing from './components/Landing'
 import Web from './components/Web'
 import Photo from './components/Photo'
@@ -26,12 +26,14 @@ let ScrollToTop = ()=>{
 
 
 function App() {
-
+  useEffect(()=>{
+    console.log('scroll');
+  },[])
   return (
     <Router>
       <ScrollToTop />
       <div className="App">
-        <SideNav />
+          <Nav />
           <Switch>
             <Route path="/" exact>
               <Landing img = {face}/>
