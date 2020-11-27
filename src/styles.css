@@ -1,7 +1,8 @@
 @import "~react-image-gallery/styles/css/image-gallery.css";
 
 
-body{
+@media screen and (min-width:1000px){
+  body{
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -219,9 +220,10 @@ img{
   margin-top: 14rem;
 }
 .preview-img{
-  border: solid;
-  width: 33.5rem;
+  width: 40rem;
   height: 100%;
+  background-size: contain;
+  background-position: center;
 }
 .text-ctnr-web{
   border: red ;
@@ -277,12 +279,129 @@ img{
   height: 10rem;
   object-fit: contain;
   visibility: hidden;
-}
+}}
 /* Mobile */
-@media screen and (max-width: 375px) {
-  .profile-pic-ctnr{
+@media screen and (max-width: 414px) {
+  body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  #root{
+    height: 100%;
+    width:100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .App{
+    height: 100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #F5F5F5;
+  }
+  .Landing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+  }
+  .nav{
+    width: 70%;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  a{
+    color: #CD6161;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  /* Home */
+  .home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 46rem;
+  }
+  .home h1{
+    font-weight: lighter;
+    color:#EEEEEE;
     position: absolute;
-    top: auto;
-    left: 0
+    top: 0;
+    z-index: 0;
+    margin-top: 0;
+    font-size: 10.125rem;
+  }
+  .home h3{
+    position: absolute;
+    top:5rem;
+    color: #585858;
+    font-size: 3rem;
+  }
+  .home h2{
+    position: absolute;
+    top: 30rem;
+    color: #CD6161;
+    font-size: 6rem;
+  }
+  .profile-pic-ctnr{
+    height:37.5rem;
+    width:37.5rem;
+    margin-top: 6rem;
+    display: flex;
+    justify-content: center;
+      z-index: 1;
+  }
+  .profile-pic-ctnr img{
+    height: inherit;
+    width: inherit;
+  }
+    /* About */
+  .about{
+    width: 100%;
+    height: 43rem;
+    display: flex;
+    flex-direction: column;
+    background: #CD6161;
+  }
+  .about h1{
+    text-align: center;
+    font-weight: lighter;
+    font-size: 8.5rem;
+    color: #BD5959;
+    position: absolute;
+    top:45rem;
+    left: 0;
+    z-index: 0;
+  }
+  .text-ctnr{
+    width: 100%;
+    height: 26.5rem;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 1;
+  }
+  p{
+    max-width: 24rem;
+    font-size: 2.25rem;
+    text-align: center;
+    color: #F5F5F5;
+  }
+  .about a{
+    color: #F5F5F5;
+    text-align: center;
+    font-size: 2rem;
   }
 }

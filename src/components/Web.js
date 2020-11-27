@@ -8,6 +8,8 @@ import {
 import SideNav from './SideNav'
 import Project from './Project'
 
+import Gust from '../img/projects/Gust.png'
+
 let Web = ()=>{
   const [projects, setProjects] = useState([])
 
@@ -15,26 +17,12 @@ let Web = ()=>{
     <div className='portfolio web'>
       <h1>WEB</h1>
       <Project
-        projectName= 'Project 1'
-        projectDesc='Lorem ipsum dolor sit amet,
-         consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-          labore et dolore magna aliquyam erat, sed diam voluptua. At
-          vero eos et accusam et justo duo dolores et ea rebum.'
+        url='https://gust.netlify.app/'
+        img={Gust}
+        projectName= 'Gust'
+        projectDesc='A weather app built with react that uses the openweathermap api'
          />
-      <Project
-        projectName= 'Project 1'
-        projectDesc='Lorem ipsum dolor sit amet,
-         consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-          labore et dolore magna aliquyam erat, sed diam voluptua. At
-          vero eos et accusam et justo duo dolores et ea rebum.'
-         />
-      <Project
-        projectName= 'Project 1'
-        projectDesc='Lorem ipsum dolor sit amet,
-         consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-          labore et dolore magna aliquyam erat, sed diam voluptua. At
-          vero eos et accusam et justo duo dolores et ea rebum.'
-         />
+
     </div>
   )
 }
