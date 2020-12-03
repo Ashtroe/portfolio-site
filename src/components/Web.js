@@ -17,7 +17,7 @@ let Web = ()=>{
     <div className='portfolio web'>
       <h1>WEB</h1>
       <Project
-        url='https://gust.netlify.app/'
+        url='https://gust-weather.herokuapp.com/'
         img={Gust}
         projectName= 'Gust'
         projectDesc='A weather app built with react that uses the openweathermap api'

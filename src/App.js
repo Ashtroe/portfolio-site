@@ -26,9 +26,7 @@ let ScrollToTop = ()=>{
 
 
 function App() {
-  useEffect(()=>{
-    console.log('scroll');
-  },[])
+  const [isScrolling,setScrolling]= useState(false)
   return (
     <Router>
       <ScrollToTop />

@@ -281,7 +281,7 @@ img{
   visibility: hidden;
 }}
 /* Mobile */
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 1000px) {
   body{
     height: 100vh;
     width: 100vw;
@@ -354,8 +354,8 @@ img{
     font-size: 6rem;
   }
   .profile-pic-ctnr{
-    height:37.5rem;
-    width:37.5rem;
+    height:100%;
+    max-width:110%;
     margin-top: 6rem;
     display: flex;
     justify-content: center;
@@ -378,10 +378,10 @@ img{
     font-weight: lighter;
     font-size: 8.5rem;
     color: #BD5959;
-    position: absolute;
-    top:45rem;
-    left: 0;
+    position: relative;
+    top:-30rem;
     z-index: 0;
+    margin: 0 auto;
   }
   .text-ctnr{
     width: 100%;
@@ -403,5 +403,26 @@ img{
     color: #F5F5F5;
     text-align: center;
     font-size: 2rem;
+    position: relative;
+    top: -10rem;
+  }
+
+  /* Web */
+  .web{
+    width: 100%;
+    height: 43rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background:#EEEEEE;;
+  }
+  .project-ctnr{
+    width:90%;
+    padding-top: 75%;
+    position: relative;
+  }
+  .preview-img{
+
+    width: 100%;
   }
 }
